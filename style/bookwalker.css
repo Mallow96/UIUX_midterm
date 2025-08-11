@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header > .navbar > .col-md-9 > .input-group {
+  width: 50%;
+}
+
+.steps {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.steps > li {
+  margin-left: 1rem;
+}
+
+.coupons > .card-footer, .points > .card-footer,
+.summary > .card-footer {
+  color: lightgray;
+  font-size: 0.75rem;
+  display: flex;
+}
+
+.card-footer > i {
+  font-size: 0.5rem;
+}
+
+.text-red {
+  color: red;
+}
+
+.row-sub {
+  font-size: 0.875rem;
+}
+
+.book-cover {
+  border-radius: 8px;
+  width: 50px;
+  height: 75px;
+  background-color: pink;
+}
+
+.coupon-display {
+  border-radius: 8px;
+  width: 40%;
+  height: 70px;
+  background-color: pink;
+}/*# sourceMappingURL=bookwalker.css.map */

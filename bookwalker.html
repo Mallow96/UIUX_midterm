@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookwalker Midterm</title>
+    <link rel="stylesheet" href="./style/bookwalker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="bg-body-tertiary">
+        <div class="row container-md navbar navbar-expand-lg justify-content-between mx-auto">
+            <div class="col-md-9 d-flex">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/BOOK☆WALKER_logo.svg" alt="bookwalker-logo">
+                </a>
+
+                <!-- serach bar -->
+                <div class="input-group input-group-sm">
+                    <span class="input-group-text rounded-start-pill" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseWidthExample" aria-expanded="false"
+                        aria-controls="collapseWidthExample">
+                        <span class="material-symbols-outlined">
+                            shield_lock
+                        </span>
+                    </span>
+
+                    <!-- Collapsed content -->
+                    <div style="">
+                        <div class="input-group-text collapse collapse-horizontal h-100 bg-secondary rounded-0"
+                            id="collapseWidthExample">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                                <label class="form-check-label" for="switchCheckDefault">安全搜尋</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="input-group-text" id="inputGroup-sizing-sm">
+                        <div class="btn-group">
+                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                全部
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">全部</a></li>
+                                <li><a class="dropdown-item" href="#">連載</a></li>
+                                <li><a class="dropdown-item" href="#">漫畫</a></li>
+                            </ul>
+                        </div>
+                    </span>
+
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-sm" placeholder="今天想找什麼作品？">
+
+                    <span class="input-group-text rounded-end-pill" id="inputGroup-sizing-sm">
+                        <span class="btn btn-sm material-symbols-outlined">
+                            search
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <!-- buttons -->
+                <ul class="navbar-nav flex-row  justify-content-between">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-symbols-outlined">
+                                newsstand
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-symbols-outlined">
+                                bookmark_heart
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-symbols-outlined">
+                                notifications
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-symbols-outlined">
+                                shopping_cart
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span class="material-symbols-outlined">
+                                person
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </header>
+
+
+    <main class="container-md">
+        <div class="head d-flex mt-4">
+            <span class="fs-2 text-info fw-bold">購物車</span>
+            <ul class="steps fs-5 m-0">
+                <li class="text-primary">1 確認訂單明細</li>
+                <li>2 填寫付款資料</li>
+                <li>3 完成購買</li>
+            </ul>
+
+            <button class="btn btn-info btn-sm rounded-end-0 ms-auto text-white fs-6 fw-bold" type=" button"
+                data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                從關注清單加入
+            </button>
+
+            <!-- aside hidden -->
+            <div class="offcanvas offcanvas-end card rounded-0" style="width:33%;" data-bs-scroll="true"
+                data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+                aria-labelledby="offcanvasScrollingLabel">
+                <div class="card-header text-white bg-info fw-bold d-flex rounded-0">
+                    <span class="me-3 fs-5 fw-bold">關注清單</span>
+                    <span class="badge text-bg-secondary d-flex align-items-center">3</span>
+                    <button type="button" class="btn btn-sm btn-outline-light p-0 d-flex align-items-center ms-auto"
+                        data-bs-dismiss="offcanvas" aria-label="Close">
+                        <span class="material-symbols-outlined">
+                            arrow_right
+                        </span>
+                    </button>
+                </div>
+
+                <div class="list-group list-group-flush rounded-0">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item form-check d-block">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
+                                <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
+                                    <div class="book-info flex-fill">
+                                        <div class="">
+                                            <span>在這裡輸入書名</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button type="button" class="btn btn-primary btn-sm d-flex align-items-center">
+                                            <span class="material-symbols-outlined fs-6">
+                                                shopping_cart
+                                            </span>
+                                            <span>購書</span>
+                                        </button>
+                                        <button type="button" class="btn btn-warning btn-sm d-flex align-items-center">
+                                            <span class="material-symbols-outlined fs-6">
+                                                shopping_cart
+                                            </span>
+                                            <span>租書</span>
+                                        </button>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item button-group">
+                            <button type="button" class="btn btn-outline-secondary btn-sm">全選</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm">刪除</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm">移至關注清單</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-8">
+                <!-- warning -->
+                <div class="card" style="width:100%;">
+                    <div class="card-header text-white bg-info fw-bold d-flex fs-5 align-items-center">
+                        <span class="material-symbols-outlined me-1">
+                            report
+                        </span>
+                        <span>電子書注意事項</span>
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <ul class="list-group-item ms-3">
+                            <li class="mb-2">本書城的商品為電子書及電子雜誌，並非紙本書。讀者可透過電腦裝置網頁瀏覽，或使用 iPhone、iPad、Android 手機或平板電腦下載閱讀。
+                            </li>
+                            <li class="mb-2">
+                                如有下載閱讀需求，為避免裝置版本無法適用，建議於購書前，先確認您的裝置可下載BOOK☆WALKER的APP，並可先下載免費電子書，確認可順利使用後再行購書。
+                            </li>
+                            <li>由於數位智慧財產權之特性，所販售之電子書刊經購買後，除內容有瑕疵或錯誤者外，不得要求退貨及退款。如有特殊情形，請洽敝公司客服人員，我們將盡速為您處理。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- order items -->
+                <div class="card order-list mt-4" style="width:100%;">
+                    <div class="card-header bg-info text-white fw-bold fs-5">
+                        <span>訂單明細</span>
+                        <span class="badge text-bg-secondary">3</span>
+
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item button-group">
+                            <button type="button" class="btn btn-outline-secondary btn-sm">全選</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm">刪除</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm">移至關注清單</button>
+                        </li>
+
+                        <li class="list-group-item form-check d-block">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
+
+                                <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
+                                    <div class="book-cover me-3"></div>
+                                    <div class="book-info flex-fill">
+                                        <div class="">
+                                            <span class="badge text-bg-secondary">分類</span>
+                                            <span>在這裡輸入作者</span>
+                                        </div>
+                                        <div class="">
+                                            <span>在這裡輸入書名</span>
+                                        </div>
+                                    </div>
+                                    <div class="book-price">
+                                        <span>購書：</span>
+                                        <span class="text-red">nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item form-check d-block">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
+
+                                <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
+                                    <div class="book-cover me-3"></div>
+                                    <div class="book-info flex-fill">
+                                        <div class="">
+                                            <span class="badge text-bg-secondary">分類</span>
+                                            <span>在這裡輸入作者</span>
+                                        </div>
+                                        <div class="">
+                                            <span>在這裡輸入書名</span>
+                                        </div>
+                                    </div>
+                                    <div class="book-price">
+                                        <span>購書：</span>
+                                        <span class="text-red">nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item form-check d-block">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
+
+                                <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
+                                    <div class="book-cover me-3"></div>
+                                    <div class="book-info flex-fill">
+                                        <div class="">
+                                            <span class="badge text-bg-secondary">分類</span>
+                                            <span>在這裡輸入作者</span>
+                                        </div>
+                                        <div class="">
+                                            <span>在這裡輸入書名</span>
+                                        </div>
+                                    </div>
+                                    <div class="book-price">
+                                        <span>購書：</span>
+                                        <span class="text-red">nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item form-check d-block">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
+
+                                <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
+                                    <div class="book-cover me-3"></div>
+                                    <div class="book-info flex-fill">
+                                        <div class="">
+                                            <span class="badge text-bg-secondary">分類</span>
+                                            <span>在這裡輸入作者</span>
+                                        </div>
+                                        <div class="">
+                                            <span>在這裡輸入書名</span>
+                                        </div>
+                                    </div>
+                                    <div class="book-price">
+                                        <span>購書：</span>
+                                        <span class="text-red">nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="list-group-item form-check d-block">
+                            <div class="form-check d-flex align-items-center">
+                                <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
+
+                                <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
+                                    <div class="book-cover me-3"></div>
+                                    <div class="book-info flex-fill">
+                                        <div class="">
+                                            <span class="badge text-bg-secondary">分類</span>
+                                            <span>在這裡輸入作者</span>
+                                        </div>
+                                        <div class="">
+                                            <span>在這裡輸入書名</span>
+                                        </div>
+                                    </div>
+                                    <div class="book-price">
+                                        <span>購書：</span>
+                                        <span class="text-red">nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </li>
+
+
+                        <li class="list-group-item button-group">
+                            <button type="button" class="btn btn-outline-secondary btn-sm">全選</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm">刪除</button>
+                            <button type="button" class="btn btn-outline-secondary btn-sm">移至關注清單</button>
+                        </li>
+                    </ul>
+
+                    <div class="card-footer bg-info-subtle text-dark fw-bold d-flex justify-content-end">
+                        <span>以上共</span>
+                        <span>nn</span>
+                        <span>項商品，小記金額共：</span>
+                        <span class="text-red">nnnn</span>
+                        <span>元</span>
+                    </div>
+                </div>
+
+                <!-- coupons -->
+                <div class="card coupons mt-4" style="width:100%;">
+                    <div class="card-header bg-info text-white fw-bold fs-5 align-items-center">
+                        <span>優惠券</span>
+                    </div>
+
+                    <!-- radio -->
+                    <div class="card-body">
+                        <div class="w-50">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2 w-50" type="search" placeholder="請輸入優惠碼"
+                                    aria-label="Search" />
+                                <button class="btn btn-primary" type="submit">領取</button>
+                            </form>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col form-check d-flex align-items-center m-0">
+                                <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon">
+                                <label class="form-check-label d-flex mx-3 flex-fill" for="radio-coupon">
+                                    <div class="coupon-display"></div>
+                                    <div class="coupon-info d-flex flex-column mx-3">
+                                        <div class="">
+                                            <span class="">使用期限：</span>
+                                            <span class="">yyyy-mm-dd</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="">適用：</span>
+                                            <span class="">全館書籍</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="">差額：</span>
+                                            <span class="">nnnn</span>
+                                            <span>元</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col form-check d-flex align-items-center m-0">
+                                <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon">
+                                <label class="form-check-label d-flex mx-3 flex-fill" for="radio-coupon">
+                                    <div class="coupon-display"></div>
+                                    <div class="coupon-info d-flex flex-column mx-3">
+                                        <div class="">
+                                            <span class="">使用期限：</span>
+                                            <span class="">yyyy-mm-dd</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="">適用：</span>
+                                            <span class="">全館書籍</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="">差額：</span>
+                                            <span class="">nnnn</span>
+                                            <span>元</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col form-check d-flex align-items-center m-0">
+                                <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon">
+                                <label class="form-check-label d-flex mx-3 flex-fill" for="radio-coupon">
+                                    <div class="coupon-display"></div>
+                                    <div class="coupon-info d-flex flex-column mx-3">
+                                        <div class="">
+                                            <span class="">使用期限：</span>
+                                            <span class="">yyyy-mm-dd</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="">適用：</span>
+                                            <span class="">全館書籍</span>
+                                        </div>
+                                        <div class="">
+                                            <span class="">差額：</span>
+                                            <span class="">nnnn</span>
+                                            <span>元</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col form-check d-flex align-items-center m-0">
+                                <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon"
+                                    checked>
+                                <label class="form-check-label mx-3 flex-fill" for="radio-coupon">
+                                    不使用優惠券
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer bg-info-subtle fw-bold">
+                        <i class="fa-solid fa-star-of-life"></i>
+                        僅顯示符合適用條件的優惠券
+                    </div>
+                </div>
+
+                <!-- points -->
+                <div class="card points mt-4" style="width:100%;">
+                    <div class="card-header bg-info text-white fw-bold fs-5 align-items-center">
+                        <span>使用點數</span>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="current-point">
+                            <span>目前可用點數：</span>
+                            <span class="text-red">nnn</span>
+                            <span>點</span>
+                        </div>
+
+                        <div class="row d-flex align-items-center mx-1">
+                            <!-- Radio 1 -->
+                            <div class="col form-check">
+                                <input class="form-check-input" type="radio" name="option" id="radio1" value="default"
+                                    checked>
+                                <label class="form-check-label" for="radio1">
+                                    不使用點數
+                                </label>
+                            </div>
+
+                            <!-- Radio 2 with form -->
+                            <div class="col form-check d-flex align-items-center">
+                                <input class="form-check-input
+                                me-2" type="radio" name="option" id="radio2" value="custom">
+                                <label class="form-check-label" for="radio2">
+                                    使用
+                                </label>
+
+                                <!-- Nested form group -->
+                                <div class="d-flex align-items-center" id="customForm">
+                                    <div class="input-group mx-2">
+                                        <input type="text" class="form-control" placeholder="0" disabled>
+                                    </div>
+                                    <label class="form-check-label" for="radio2">
+                                        點
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer bg-info-subtle fw-bold">
+                        <i class="fa-solid fa-star-of-life"></i>
+                        點數過期日：2025-09-24
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- right -->
+            <div class="col-md-4">
+                <!-- summary -->
+                <div class="card summary" style="width:100%;">
+                    <div class="card-header bg-info text-white fw-bold fs-5 align-items-center">
+                        <span>結帳明細</span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="sum list-group-item">
+                            <div class="row-main d-flex">
+                                <span class="flex-fill">合計金額：</span>
+                                <span>nnn</span>
+                                <span>元</span>
+                            </div>
+
+                            <div class="row-sub text-secondary mt-2">
+                                <div class="d-flex">
+                                    <span class="flex-fill">優惠券折抵：</span>
+                                    <span>-nnn</span>
+                                    <span>元</span>
+                                </div>
+                                <div class="d-flex mt-2">
+                                    <span class="flex-fill">點數折抵：</span>
+                                    <span>-nnn</span>
+                                    <span>元</span>
+                                </div>
+                                <div class="d-flex mt-2">
+                                    <span class="flex-fill">手續費：</span>
+                                    <span>nnn</span>
+                                    <span>元</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="sum-fin list-group-item">
+                            <div class="row-main d-flex">
+                                <span class="flex-fill">結帳金額：</span>
+                                <span>nnn</span>
+                                <span>元</span>
+                            </div>
+
+                            <div class="row-sub mt-2">
+                                <div class="d-flex">
+                                    <span class="flex-fill">回饋點數：</span>
+                                    <span>nnn</span>
+                                    <span>元</span>
+                                </div>
+                                <div class="row-sub2 ms-3 mt-2">
+                                    <div class="d-flex text-secondary">
+                                        <span class="flex-fill">一般點數：</span>
+                                        <span>nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                    <div class="d-flex text-secondary mt-2">
+                                        <span class="flex-fill">會員等級獎勵：</span>
+                                        <span>nnn</span>
+                                        <span>元</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row-btn d-grid mt-4">
+                                <button type="button" class="btn btn-danger">結帳</button>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <!-- card footer -->
+                    <div class="card-footer bg-info-subtle fw-bold d-flex">
+                        <i class="fa-solid fa-star-of-life"></i>
+                        <div>
+                            <span>於 yyyy-mm-dd 前再消費</span>
+                            <span class="text-red">nnn</span>
+                            <span>元，隔月即可升級至會員等級</span>
+                            <span class="text-red">Lv. N</span>
+                            <span>（獎勵回饋</span>
+                            <span class="text-red">n%</span>
+                            <span>點數。）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
+        crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const radio1 = document.getElementById("radio1");
+            const radio2 = document.getElementById("radio2");
+            const customForm = document.querySelectorAll("#customForm input, #customForm button");
+
+            function toggleCustomForm() {
+                const enable = radio2.checked;
+                customForm.forEach(el => el.disabled = !enable);
+            }
+
+            radio1.addEventListener("change", toggleCustomForm);
+            radio2.addEventListener("change", toggleCustomForm);
+
+            toggleCustomForm(); // run on page load
+        });
+    </script>
+
+</body>
+
+</html>
