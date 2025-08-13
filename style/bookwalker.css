@@ -3,8 +3,8 @@
   padding: 0;
 }
 
-header > .navbar > .col-md-9 > .input-group {
-  width: 50%;
+body {
+  background-color: rgb(240, 240, 240) !important;
 }
 
 .steps {
@@ -13,8 +13,9 @@ header > .navbar > .col-md-9 > .input-group {
   align-items: center;
 }
 
-.steps > li {
-  margin-left: 1rem;
+.head > button {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .coupons > .card-footer, .points > .card-footer,
@@ -48,4 +49,22 @@ header > .navbar > .col-md-9 > .input-group {
   width: 40%;
   height: 70px;
   background-color: pink;
+}
+
+@media (min-width: 992px) {
+  header > .navbar > .navbar-brand {
+    order: -1;
+  }
+  header > .navbar > .header-button {
+    order: 0;
+  }
+  header > .navbar > .search-bar {
+    order: -1;
+    max-width: 40%;
+  }
+}
+@media (max-width: 768px) {
+  main > .head > .offcanvas {
+    width: 100% !important;
+  }
 }/*# sourceMappingURL=bookwalker.css.map */

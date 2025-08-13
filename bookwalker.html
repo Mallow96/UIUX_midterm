@@ -15,62 +15,15 @@
 </head>
 
 <body>
-    <header class="bg-body-tertiary">
-        <div class="row container-md navbar navbar-expand-lg justify-content-between mx-auto">
-            <div class="col-md-9 d-flex">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/BOOK☆WALKER_logo.svg" alt="bookwalker-logo">
-                </a>
+    <header class="bg-body-tertiary position-sticky top-0 z-1 bg-white">
+        <div class="row container-md navbar mx-auto justify-content-start">
+            <a class="navbar-brand m-0 col-8 col-lg-4 col-xl-3" href="#">
+                <img src="./img/BOOK☆WALKER_logo.svg" alt="bookwalker-logo">
+            </a>
 
-                <!-- serach bar -->
-                <div class="input-group input-group-sm">
-                    <span class="input-group-text rounded-start-pill" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseWidthExample" aria-expanded="false"
-                        aria-controls="collapseWidthExample">
-                        <span class="material-symbols-outlined">
-                            shield_lock
-                        </span>
-                    </span>
-
-                    <!-- Collapsed content -->
-                    <div style="">
-                        <div class="input-group-text collapse collapse-horizontal h-100 bg-secondary rounded-0"
-                            id="collapseWidthExample">
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
-                                <label class="form-check-label" for="switchCheckDefault">安全搜尋</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <span class="input-group-text" id="inputGroup-sizing-sm">
-                        <div class="btn-group">
-                            <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                全部
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">全部</a></li>
-                                <li><a class="dropdown-item" href="#">連載</a></li>
-                                <li><a class="dropdown-item" href="#">漫畫</a></li>
-                            </ul>
-                        </div>
-                    </span>
-
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-sm" placeholder="今天想找什麼作品？">
-
-                    <span class="input-group-text rounded-end-pill" id="inputGroup-sizing-sm">
-                        <span class="btn btn-sm material-symbols-outlined">
-                            search
-                        </span>
-                    </span>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <!-- buttons -->
-                <ul class="navbar-nav flex-row  justify-content-between">
+            <!-- buttons -->
+            <div class="header-button ms-auto col-4 col-lg-2 col-xl-2">
+                <ul class="navbar-nav flex-row justify-content-between">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <span class="material-symbols-outlined">
@@ -109,28 +62,72 @@
                 </ul>
             </div>
 
+            <!-- serach bar -->
+            <div class="input-group input-group-sm search-bar col-12 col-lg col-xl">
+                <span class="input-group-text rounded-start-pill" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                    <span class="material-symbols-outlined">
+                        shield_lock
+                    </span>
+                </span>
 
+                <!-- Collapsed content -->
+                <div>
+                    <div class="input-group-text collapse collapse-horizontal h-100 bg-secondary rounded-0"
+                        id="collapseWidthExample">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                            <label class="form-check-label" for="switchCheckDefault">安全搜尋</label>
+                        </div>
+                    </div>
+                </div>
+
+                <span class="input-group-text" id="inputGroup-sizing-sm">
+                    <div class="btn-group">
+                        <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            全部
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">全部</a></li>
+                            <li><a class="dropdown-item" href="#">連載</a></li>
+                            <li><a class="dropdown-item" href="#">漫畫</a></li>
+                        </ul>
+                    </div>
+                </span>
+
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-sm" placeholder="今天想找什麼作品？">
+
+                <span class="input-group-text rounded-end-pill" id="inputGroup-sizing-sm">
+                    <span class="btn btn-sm material-symbols-outlined">
+                        search
+                    </span>
+                </span>
+            </div>
         </div>
     </header>
 
 
     <main class="container-md">
-        <div class="head d-flex mt-4">
-            <span class="fs-2 text-info fw-bold">購物車</span>
-            <ul class="steps fs-5 m-0">
+        <!-- main head -->
+        <div class="head d-flex pt-4 row">
+            <span class="fs-2 text-info fw-bold col-12 col-md-3">購物車</span>
+            <ul class="steps fs-5 m-0 col-12 col-md-9">
                 <li class="text-primary">1 確認訂單明細</li>
-                <li>2 填寫付款資料</li>
-                <li>3 完成購買</li>
+                <li class="ms-3">2 填寫付款資料</li>
+                <li class="ms-3">3 完成購買</li>
             </ul>
 
-            <button class="btn btn-info btn-sm rounded-end-0 ms-auto text-white fs-6 fw-bold" type=" button"
-                data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <button class="btn btn-success btn-lg rounded-end-0 text-white fs-5 fw-bold position-fixed end-0"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+                aria-controls="offcanvasScrolling">
                 從關注清單加入
             </button>
 
             <!-- aside hidden -->
-            <div class="offcanvas offcanvas-end card rounded-0" style="width:33%;" data-bs-scroll="true"
-                data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
+            <div class="offcanvas offcanvas-end card rounded-0 p-0 rounded-start overflow-hidden" style="width:33%;"
+                data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling"
                 aria-labelledby="offcanvasScrollingLabel">
                 <div class="card-header text-white bg-info fw-bold d-flex rounded-0">
                     <span class="me-3 fs-5 fw-bold">關注清單</span>
@@ -149,9 +146,9 @@
                             <div class="form-check d-flex align-items-center">
                                 <input class="form-check-input me-3" type="checkbox" value="" id="checkDefault">
                                 <label class="form-check-label d-flex flex-fill align-items-center" for="checkDefault">
-                                    <div class="book-info flex-fill">
+                                    <div class="book-info flex-fill w-50">
                                         <div class="">
-                                            <span>在這裡輸入書名</span>
+                                            <span>在這裡輸入書名在這裡輸入書名在這裡輸入書名</span>
                                         </div>
                                     </div>
                                     <div class="d-grid gap-2">
@@ -182,7 +179,9 @@
             </div>
         </div>
 
+        <!-- main body -->
         <div class="row mt-4">
+            <!-- left -->
             <div class="col-md-8">
                 <!-- warning -->
                 <div class="card" style="width:100%;">
