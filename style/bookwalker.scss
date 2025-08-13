@@ -9,14 +9,18 @@ body {
 
 .steps{
     display: flex;
-    list-style-type: none;
     align-items: center;
 }
+
+.steps>li:nth-child(1) {
+    color: #1D72A0;
+    }
 
 .head>button { 
     width: fit-content;
   
 }
+
 
 // card-footer 
 .coupons>.card-footer, .points>.card-footer,
@@ -68,5 +72,11 @@ body {
 @media (max-width:768px){
     main>.head>.offcanvas {
         width: 100%!important;
+    }
+
+    main>div>div>.summary {
+        position: fixed;
+        width: 100%;
+        bottom: 0; right: 0;
     }
 }
