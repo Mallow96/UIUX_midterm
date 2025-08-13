@@ -363,19 +363,23 @@
 
                     <!-- radio -->
                     <div class="card-body">
-                        <div class="w-50">
+                        <!-- coupon code -->
+                        <div class="coupon-code">
                             <form class="d-flex" role="search">
                                 <input class="form-control me-2 w-50" type="search" placeholder="請輸入優惠碼"
                                     aria-label="Search" />
                                 <button class="btn btn-primary" type="submit">領取</button>
                             </form>
                         </div>
-                        <div class="row mt-3">
-                            <div class="col form-check d-flex align-items-center m-0">
+
+                        <!-- radio rows -->
+                        <div class="row mt-3 mx-1">
+                            <!-- coupon 1 -->
+                            <div class="col-12 col-xxl-6 my-2 form-check d-flex align-items-center">
                                 <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon">
-                                <label class="form-check-label d-flex mx-3 flex-fill" for="radio-coupon">
+                                <label class="form-check-label d-flex ms-2 flex-fill" for="radio-coupon">
                                     <div class="coupon-display"></div>
-                                    <div class="coupon-info d-flex flex-column mx-3">
+                                    <div class="coupon-info d-flex flex-column ms-2 justify-content-evenly">
                                         <div class="">
                                             <span class="">使用期限：</span>
                                             <span class="">yyyy-mm-dd</span>
@@ -392,11 +396,13 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="col form-check d-flex align-items-center m-0">
+
+                            <!-- coupon 2 -->
+                            <div class="col-12 col-xxl-6 my-2 form-check d-flex align-items-center">
                                 <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon">
-                                <label class="form-check-label d-flex mx-3 flex-fill" for="radio-coupon">
+                                <label class="form-check-label d-flex ms-2 flex-fill" for="radio-coupon">
                                     <div class="coupon-display"></div>
-                                    <div class="coupon-info d-flex flex-column mx-3">
+                                    <div class="coupon-info d-flex flex-column ms-2 justify-content-evenly">
                                         <div class="">
                                             <span class="">使用期限：</span>
                                             <span class="">yyyy-mm-dd</span>
@@ -413,13 +419,13 @@
                                     </div>
                                 </label>
                             </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col form-check d-flex align-items-center m-0">
+
+                            <!-- coupon 3 -->
+                            <div class="col-12 col-xxl-6 my-2 form-check d-flex align-items-center">
                                 <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon">
-                                <label class="form-check-label d-flex mx-3 flex-fill" for="radio-coupon">
+                                <label class="form-check-label d-flex ms-2 flex-fill" for="radio-coupon">
                                     <div class="coupon-display"></div>
-                                    <div class="coupon-info d-flex flex-column mx-3">
+                                    <div class="coupon-info d-flex flex-column ms-2 justify-content-evenly">
                                         <div class="">
                                             <span class="">使用期限：</span>
                                             <span class="">yyyy-mm-dd</span>
@@ -436,24 +442,26 @@
                                     </div>
                                 </label>
                             </div>
-                            <div class="col form-check d-flex align-items-center m-0">
+
+                            <!-- coupon 4 -->
+                            <div class="col-12 col-xxl-6 my-2 form-check d-flex align-items-center">
                                 <input class="form-check-input" type="radio" name="radio-coupon" id="radio-coupon"
                                     checked>
-                                <label class="form-check-label mx-3 flex-fill" for="radio-coupon">
+                                <label class="form-check-label ms-3 flex-fill" for="radio-coupon">
                                     不使用優惠券
                                 </label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="card-footer bg-info-subtle fw-bold">
+                    <div class="card-footer bg-info-subtle">
                         <i class="fa-solid fa-star-of-life"></i>
                         僅顯示符合適用條件的優惠券
                     </div>
                 </div>
 
                 <!-- points -->
-                <div class="card points mt-4" style="width:100%;">
+                <div class="card points my-4" style="width:100%;">
                     <div class="card-header bg-info text-white fw-bold fs-5 align-items-center">
                         <span>使用點數</span>
                     </div>
@@ -467,7 +475,7 @@
 
                         <div class="row d-flex align-items-center mx-1">
                             <!-- Radio 1 -->
-                            <div class="col form-check">
+                            <div class="col-5 form-check">
                                 <input class="form-check-input" type="radio" name="option" id="radio1" value="default"
                                     checked>
                                 <label class="form-check-label" for="radio1">
@@ -476,7 +484,7 @@
                             </div>
 
                             <!-- Radio 2 with form -->
-                            <div class="col form-check d-flex align-items-center">
+                            <div class="col-7 form-check d-flex align-items-center">
                                 <input class="form-check-input
                                 me-2" type="radio" name="option" id="radio2" value="custom">
                                 <label class="form-check-label" for="radio2">
@@ -497,7 +505,7 @@
 
                     </div>
 
-                    <div class="card-footer bg-info-subtle fw-bold">
+                    <div class="card-footer bg-info-subtle">
                         <i class="fa-solid fa-star-of-life"></i>
                         點數過期日：2025-09-24
                     </div>
@@ -512,85 +520,115 @@
                     <div class="card-header bg-info text-white fw-bold fs-5 align-items-center">
                         <span>結帳明細</span>
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="sum list-group-item">
-                            <div class="row-main d-flex">
-                                <span class="flex-fill">合計金額：</span>
-                                <span>nnn</span>
-                                <span>元</span>
-                            </div>
 
-                            <div class="row-sub text-secondary mt-2">
-                                <div class="d-flex">
-                                    <span class="flex-fill">優惠券折抵：</span>
-                                    <span>-nnn</span>
-                                    <span>元</span>
-                                </div>
-                                <div class="d-flex mt-2">
-                                    <span class="flex-fill">點數折抵：</span>
-                                    <span>-nnn</span>
-                                    <span>元</span>
-                                </div>
-                                <div class="d-flex mt-2">
-                                    <span class="flex-fill">手續費：</span>
-                                    <span>nnn</span>
-                                    <span>元</span>
+                    <!-- summary body -->
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <!-- collapse 1 -->
+                        <div class="accordion-item rounded-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white rounded-0" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                    合計與折抵
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row-main mb-3">
+                                        <span class="flex-fill">合計金額：</span>
+                                        <span>nnn</span>
+                                        <span class="pe-3">元</span>
+                                    </div>
+                                    <div class="row-sub text-secondary">
+                                        <div class="d-flex">
+                                            <span class="flex-fill">優惠券折抵：</span>
+                                            <span>-nnn</span>
+                                            <span>元</span>
+                                        </div>
+                                        <div class="d-flex mt-2">
+                                            <span class="flex-fill">點數折抵：</span>
+                                            <span>-nnn</span>
+                                            <span>元</span>
+                                        </div>
+                                        <div class="d-flex mt-2">
+                                            <span class="flex-fill">手續費：</span>
+                                            <span>nnn</span>
+                                            <span>元</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </li>
+                        </div>
 
-                        <li class="sum-fin list-group-item">
-                            <div class="row-main d-flex">
+                        <!-- collapse 2 -->
+                        <div class="accordion-item rounded-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-white rounded-0" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapsetwo"
+                                    aria-expanded="false" aria-controls="panelsStayOpen-collapsetwo">
+                                    點數回饋
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapsetwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <div class="row-sub">
+                                        <div class="d-flex">
+                                            <span class="flex-fill">回饋點數：</span>
+                                            <span>nnn</span>
+                                            <span>元</span>
+                                        </div>
+                                        <div class="row-sub2 ms-3 mt-2">
+                                            <div class="d-flex text-secondary">
+                                                <span class="flex-fill">一般點數：</span>
+                                                <span>nnn</span>
+                                                <span>元</span>
+                                            </div>
+                                            <div class="d-flex text-secondary mt-2">
+                                                <span class="flex-fill">會員等級獎勵：</span>
+                                                <span>nnn</span>
+                                                <span>元</span>
+                                            </div>
+
+                                            <div class="point-info mt-3">
+                                                <i class="fa-solid fa-star-of-life"></i>
+                                                <span>於 yyyy-mm-dd 前再消費</span>
+                                                <span class="text-red">nnn</span>
+                                                <span>元，隔月即可升級至會員等級</span>
+                                                <span class="text-red">Lv. N</span>
+                                                <span>（獎勵回饋</span>
+                                                <span class="text-red">n%</span>
+                                                <span>點數。）</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- final and button -->
+                    <div class="sum-fin list-group-item">
+                        <div class="row-btn d-grid">
+                            <div class="mb-3 fw-bold">
                                 <span class="flex-fill">結帳金額：</span>
-                                <span>nnn</span>
-                                <span>元</span>
+                                <span class="text-red">nnn</span>
+                                <span class="pe-3">元</span>
                             </div>
 
-                            <div class="row-sub mt-2">
-                                <div class="d-flex">
-                                    <span class="flex-fill">回饋點數：</span>
-                                    <span>nnn</span>
-                                    <span>元</span>
-                                </div>
-                                <div class="row-sub2 ms-3 mt-2">
-                                    <div class="d-flex text-secondary">
-                                        <span class="flex-fill">一般點數：</span>
-                                        <span>nnn</span>
-                                        <span>元</span>
-                                    </div>
-                                    <div class="d-flex text-secondary mt-2">
-                                        <span class="flex-fill">會員等級獎勵：</span>
-                                        <span>nnn</span>
-                                        <span>元</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row-btn d-grid mt-4">
-                                <button type="button" class="btn btn-danger">結帳</button>
-                            </div>
-                        </li>
-
-                    </ul>
+                            <button type="button" class="btn btn-danger">結帳</button>
+                        </div>
+                    </div>
 
                     <!-- card footer -->
-                    <div class="card-footer bg-info-subtle fw-bold d-flex">
-                        <i class="fa-solid fa-star-of-life"></i>
-                        <div>
-                            <span>於 yyyy-mm-dd 前再消費</span>
-                            <span class="text-red">nnn</span>
-                            <span>元，隔月即可升級至會員等級</span>
-                            <span class="text-red">Lv. N</span>
-                            <span>（獎勵回饋</span>
-                            <span class="text-red">n%</span>
-                            <span>點數。）</span>
+                    <div class="card-footer bg-info-subtle">
+                        <div class="point-info">
+                            <i class="fa-solid fa-star-of-life"></i>
+                            確認訂單明細、優惠券、點數後，點「結帳」鈕進入付款頁面。
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
     </main>
 

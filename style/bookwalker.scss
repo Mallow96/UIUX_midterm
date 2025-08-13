@@ -21,16 +21,20 @@ body {
   
 }
 
+.sum-fin{
+    margin: 1rem 1.25rem;
+}
+
 
 // card-footer 
 .coupons>.card-footer, .points>.card-footer,
-.summary>.card-footer{
+.summary>.card-footer, .point-info{
     color: lightgray;
     font-size: 0.75rem;
-    display: flex;
-}
+    font-weight: bold;
+    }
 
-.card-footer>i{
+.card-footer>i, .point-info>i{
     font-size: 0.5rem;
 }
 
@@ -51,9 +55,20 @@ body {
 
 .coupon-display{
     border-radius: 8px;
-    width: 40%;
+    width: 200px;
     height: 70px;    background-color: pink;
 }
+
+.coupon-info {
+    font-size: .875rem;
+}
+
+.coupon-code {
+    min-width: 250px;
+    max-width: 420px;
+}
+
+
 
 
 @media (min-width:992px) {
@@ -70,6 +85,9 @@ body {
 }
 
 @media (max-width:768px){
+   
+    main {margin-bottom: 300px;}
+
     main>.head>.offcanvas {
         width: 100%!important;
     }
@@ -78,5 +96,6 @@ body {
         position: fixed;
         width: 100%;
         bottom: 0; right: 0;
+        z-index: 1;
     }
 }
