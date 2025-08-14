@@ -1,0 +1,137 @@
+// roots
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-color: #4CB6EF;
+    --sub-color: #C3E7FA;
+    --gray-stroke: #A3A3A3;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.color-main {
+    color: #4CB6EF
+}
+
+.color-sub {
+    color: #C3E7FA;
+}
+
+h1 {
+    font-size: 2.4375rem;
+    color: var(--main-color);
+}
+
+header {
+    background-color: white;
+    padding: 0.5rem 0;
+}
+
+.a-i-center {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.input-text {
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+    height: 2rem;
+    padding: 0 0.25rem;
+}
+
+// components
+
+.dropdown {
+    font-size: 1rem; 
+    gap: 1rem;
+    white-space: nowrap;
+}
+
+.card {
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-radio {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.card-head {
+    background-color: var(--main-color);
+    color: white;
+    padding: 0.5rem .75rem;
+}
+
+.card-body {
+    background-color: white;
+    padding: .75rem 1.5rem;
+}
+
+.input-text-main {
+    border: 0.15rem solid; 
+    border-color: var(--gray-stroke);
+    border-radius: .5rem;
+}
+
+
+// header
+header>.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sb-outline {
+    border: 0.15rem solid lightgray;
+    padding: 0.25rem 1rem;
+    border-radius: 5rem;
+    justify-content: space-between;
+}
+
+.sb-dropdown {
+    margin: 0 1rem;
+}
+
+header>div>.icon-bar>.header-icons {
+    font-size: 2rem;
+}
+
+// main>head
+
+.main-head {
+    margin: 0.5rem 1rem;
+}
+
+.steps {
+    margin: 0.5rem 1.25rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    justify-content: space-between;}
+
+.steps>li:nth-child(2) {
+    color: #1D72A0;
+}
+

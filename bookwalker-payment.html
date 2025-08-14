@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookwalker Payment</title>
+
+    <link rel="stylesheet" href="./style/bookwalker-payment.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <!-- google fonts icons-->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="./img/BOOK☆WALKER_logo.svg" alt="bookwalker logo">
+            </div>
+
+            <div class="icon-bar">
+                <span class="header-icons material-symbols-outlined">
+                    notifications
+                </span>
+                <span class="header-icons material-symbols-outlined">
+                    shopping_cart
+                </span>
+                <span class="header-icons material-symbols-outlined">
+                    person
+                </span>
+                <span class="header-icons material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+
+            <div class="search-bar w-100">
+                <div class="sb-outline a-i-center">
+                    <div class="sb-left a-i-center">
+                        <button class="age-restrict a-i-center">
+                            <span class="material-symbols-outlined">
+                                encrypted
+                            </span>
+                        </button>
+
+                        <button class="sb-dropdown dropdown a-i-center">
+                            <span>全部</span>
+                            <span class="material-symbols-outlined">
+                                keyboard_arrow_down
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="search-group a-i-center w-100">
+                        <input class="input-text" type="text" placeholder="今天想找什麼作品？">
+                        <button>
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main>
+        <div class="container">
+            <!-- main head -->
+            <section class="main-head">
+                <h1>結帳</h1>
+                <ol class="steps a-i-center">
+                    <li>確認訂單明細</li>
+                    <li>填寫付款資料</li>
+                    <li>完成購買</li>
+                </ol>
+            </section>
+
+            <!-- payment method -->
+            <section class="payment card">
+                <div class="card-head">
+                    <h3>付款方式</h3>
+                </div>
+                <div class="card-body">
+                    <div class="credit-card">
+                        <div class="radio-group">
+                            <input class="card-radio" type="radio" id="credit-card" name="payment-method"
+                                value="credit-card" checked>
+                            <label for="credit-card">信用卡</label>
+                        </div>
+
+                        <input class="input-text input-text-main" type="text" placeholder="請輸入信用卡號">
+                    </div>
+
+                </div>
+                <div class="card-foot"></div>
+            </section>
+
+            <!-- invoice -->
+            <section class="invoice">
+
+            </section>
+
+            <!-- summary -->
+            <section class="pay-sum"></section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
