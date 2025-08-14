@@ -14,8 +14,14 @@
     <!-- bootstrap -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+
     <!-- google fonts icons-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,16 +32,22 @@
             </div>
 
             <div class="icon-bar">
-                <span class="header-icons material-symbols-outlined">
+                <span class="header-icons material-symbols-outlined bookshelf">
+                    newsstand
+                </span>
+                <span class="header-icons material-symbols-outlined wishlist">
+                    bookmark_heart
+                </span>
+                <span class="header-icons material-symbols-outlined notifications">
                     notifications
                 </span>
-                <span class="header-icons material-symbols-outlined">
+                <span class="header-icons material-symbols-outlined cart">
                     shopping_cart
                 </span>
-                <span class="header-icons material-symbols-outlined">
+                <span class="header-icons material-symbols-outlined account">
                     person
                 </span>
-                <span class="header-icons material-symbols-outlined">
+                <span class="header-icons material-symbols-outlined menu">
                     menu
                 </span>
             </div>
@@ -84,39 +96,366 @@
                 </ol>
             </section>
 
-            <!-- payment method -->
-            <section class="payment card">
-                <div class="card-head">
-                    <h3>付款方式</h3>
-                </div>
-                <div class="card-body">
-                    <div class="credit-card">
-                        <div class="radio-group">
-                            <input class="card-radio" type="radio" id="credit-card" name="payment-method"
-                                value="credit-card" checked>
-                            <label for="credit-card">信用卡</label>
+            <div class="content">
+                <div class="container-left">
+                    <!-- payment method -->
+                    <section class="payment card">
+                        <div class="card-head">
+                            <h3>付款方式</h3>
                         </div>
 
-                        <input class="input-text input-text-main" type="text" placeholder="請輸入信用卡號">
-                    </div>
+                        <div class="card-body">
+                            <!-- credit card -->
+                            <div class="credit-card">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="credit-card" name="payment-method"
+                                        value="credit-card" checked>
+                                    <label for="credit-card">信用卡</label>
+                                </div>
 
+                                <div class="payment-note">
+                                    <span class="material-symbols-outlined">
+                                        emergency
+                                    </span>
+                                    <span>
+                                        使用信用卡支付時，單筆訂單最低結帳金額為5元。
+                                    </span>
+                                </div>
+
+                                <input class="input-text input-text-main" type="text" placeholder="請輸入信用卡號">
+
+                                <div class="card-date">
+                                    <span>有效期限</span>
+                                    <input class="input-text input-text-main" type="text" placeholder="MM/YY">
+                                </div>
+                                <div class="card-cvc">
+                                    <span>安全碼</span>
+                                    <input class="input-text input-text-main" type="text" placeholder="CVC">
+                                </div>
+
+                            </div>
+
+                            <!-- union pay -->
+                            <div class="union-pay">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="union-pay" name="payment-method"
+                                        value="union-pay">
+                                    <label for="union-pay">
+                                        <div>銀聯卡</div>
+                                        <div>(不論您的銀聯卡是否具信用卡功能，都請選擇此付款方式。)</div>
+                                    </label>
+                                </div>
+                                <div class="payment-note">
+                                    <span class="material-symbols-outlined">
+                                        emergency
+                                    </span>
+                                    <span>
+                                        使用信用卡支付時，單筆訂單最低結帳金額為5元。
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- ATM transfer -->
+                            <div class="transfer">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="transfer" name="payment-method"
+                                        value="transfer">
+                                    <label for="transfer">
+                                        ATM轉帳
+                                    </label>
+                                    <div class="payment-note">
+                                        <span class="material-symbols-outlined">
+                                            emergency
+                                        </span>
+                                        <span>
+                                            使用ATM轉帳支付時，單筆訂單最低結帳金額為16元，最高上限為20,000元。
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- convenience store -->
+                            <div class="conbini">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="conbini" name="payment-method"
+                                        value="conbini">
+                                    <label for="conbini">
+                                        <div>超商代繳</div>
+                                        <div>(須自行至超商機台輸入代碼，產生繳費單後至櫃檯繳費。)</div>
+                                    </label>
+                                </div>
+                                <div class="payment-note">
+                                    <span class="material-symbols-outlined">
+                                        emergency
+                                    </span>
+                                    <span>
+                                        若超商代繳結帳未滿500元，須支付手續費30元。
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- linepay -->
+                            <div class="linepay">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="linepay" name="payment-method"
+                                        value="linepay">
+                                    <label for="linepay">
+                                        Linepay
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-foot">
+                            <span class="material-symbols-outlined">
+                                emergency
+                            </span>
+                            <span>
+                                僅顯示符合適用條件的優惠券
+                            </span>
+                        </div>
+                    </section>
+
+                    <!-- invoice -->
+                    <section class="invoice card">
+                        <div class="card-head">
+                            <h3>發票資訊</h3>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="invoice-email">
+                                <div>
+                                    <span class="material-symbols-outlined text-red">
+                                        emergency
+                                    </span>
+                                    <span>
+                                        發票相關通知寄送email至：
+                                    </span>
+                                </div>
+                                <input class="input-text input-text-main" type="text" placeholder="example@example.com">
+                            </div>
+
+                            <div class="einvoice">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="einvoice" name="invoice" value="einvoice"
+                                        checked>
+                                    <label for="einvoice">
+                                        電子發票
+                                    </label>
+                                </div>
+
+                                <div class="einvoice-sub">
+                                    <div class="member-ein radio-group">
+                                        <input class="card-radio" type="radio" id="member-ein" name="einvoice"
+                                            value="member-ein" checked>
+                                        <label for="member-ein">
+                                            綠界會員載具
+                                        </label>
+                                    </div>
+
+                                    <div class="mobile-ein radio-group">
+                                        <input class="card-radio" type="radio" id="mobile-ein" name="einvoice"
+                                            value="mobile-ein">
+                                        <label for="mobile-ein">
+                                            手機條碼載具：/
+                                        </label>
+
+                                        <input class="input-text input-text-main" type="text" placeholder="不含斜線7碼">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donate">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="donate" name="invoice" value="donate">
+                                    <label for="donate">
+                                        捐贈發票
+                                    </label>
+                                </div>
+                                <div class="donate-sub">
+                                    <button class="body-dropdown dropdown a-i-center">
+                                        <span>財團法人NNNN基金會</span>
+                                        <span class="material-symbols-outlined">
+                                            keyboard_arrow_down
+                                        </span>
+                                    </button>
+
+
+                                    <div class="donate-code">
+                                        <div>或填寫</div>
+                                        <input class="input-text input-text-main" type="text" placeholder="愛心碼">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="printed">
+                                <div class="radio-group">
+                                    <input class="card-radio" type="radio" id="printed" name="invoice" value="printed">
+                                    <label for="printed">
+                                        三聯式發票
+                                    </label>
+                                </div>
+
+                                <div class="row">
+                                    <input class="input-text input-text-main" type="text" placeholder="發票抬頭">
+                                    <input class="input-text input-text-main" type="text" placeholder="統一編號">
+                                </div>
+
+                                <div class="row">
+                                    <input class="input-text input-text-main" type="text" placeholder="收件人姓名">
+                                    <input class="input-text input-text-main" type="text" placeholder="聯絡電話">
+                                </div>
+
+                                <div class="row address">
+                                    <input class="input-text input-text-main" type="text" placeholder="郵遞區號">
+                                    <button class="body-dropdown dropdown a-i-center">
+                                        <span>縣市</span>
+                                        <span class="material-symbols-outlined">
+                                            keyboard_arrow_down
+                                        </span>
+                                    </button>
+                                    <button class="body-dropdown dropdown a-i-center">
+                                        <span>鄉鎮市區</span>
+                                        <span class="material-symbols-outlined">
+                                            keyboard_arrow_down
+                                        </span>
+                                    </button>
+                                </div>
+
+                                <div class="row address-line">
+                                    <input class="input-text input-text-main address-line" type="text" placeholder="地址">
+                                </div>
+
+                            </div>
+
+                            <div class="a-i-center">
+                                <input class="card-checkbox" type="checkbox" id="save-invoice-settings"
+                                    name="save-invoice-settings" value="true" checked>
+                                <label for="save-invoice-settings">
+                                    <span>儲存我的發票資訊（可至</span>
+                                    <span class="text-red">個人專區</span>
+                                    <span>修改）</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="card-foot">
+                            <span class="material-symbols-outlined">
+                                emergency
+                            </span>
+                            <span>
+                                依統一發票使用辦法規定：發票一經開立不得任意更改或改開發票。
+                            </span>
+                        </div>
+
+                    </section>
                 </div>
-                <div class="card-foot"></div>
-            </section>
 
-            <!-- invoice -->
-            <section class="invoice">
+                <div class="container-right">
+                    <!-- summary -->
+                    <section class="pay-sum card">
+                        <div class="card-head">
+                            <h3>結帳明細</h3>
+                        </div>
+                        <div class="card-body sum-content">
+                            <div class="sum-top">
+                                <div class="row a-i-center">
+                                    <h3>合計金額：</h3>
+                                    <h3>
+                                        <span>nnn</span> 元
+                                    </h3>
+                                </div>
 
-            </section>
+                                <div class="row a-i-center">
+                                    <div>優惠券折抵：</div>
+                                    <div>
+                                        - <span>nnn</span> 元
+                                    </div>
+                                </div>
 
-            <!-- summary -->
-            <section class="pay-sum"></section>
+                                <div class="row a-i-center">
+                                    <div>點數折抵：</div>
+                                    <div>
+                                        - <span>nnn</span> 元
+                                    </div>
+                                </div>
+
+                                <div class="row a-i-center">
+                                    <div>手續費：</div>
+                                    <div>
+                                        <span>nnn</span> 元
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="sum-bot">
+                                <div class="row a-i-center">
+                                    <h3>結帳金額：</h3>
+                                    <h3>
+                                        <span class="text-red">nnn</span> 元
+                                    </h3>
+                                </div>
+
+                                <div class="row a-i-center">
+                                    <p>回饋點數：</p>
+                                    <p>
+                                        <span class="text-red">nnn</span> 點
+                                    </p>
+                                </div>
+
+                                <div class="row a-i-center">
+                                    <div>一般點數：</div>
+                                    <div>
+                                        <span>nnn</span> 點
+                                    </div>
+                                </div>
+
+                                <div class="row a-i-center">
+                                    <div>會員等級獎勵：</div>
+                                    <div>
+                                        <span>nnn</span> 點
+                                    </div>
+                                </div>
+
+                                <div class="row pay-btn">
+                                    <button class="confirm-payment">確認付款</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="card-foot">
+                            <span class="material-symbols-outlined">
+                                emergency
+                            </span>
+                            <span>
+                                於 yyyy-mm-dd 前再消費
+                                <span class="text-red">nnn</span>
+                                元，隔月即可升級至會員等級
+                                <span class="text-red">Lv. N</span>
+                                （獎勵回饋
+                                <span class="text-red">n%</span>
+                                點數。）
+                            </span>
+                            <div class="row">
+                                <span>確認付款後，即視為同意
+                                    <span class="text-red">條款與規則</span>
+                                    。
+                                </span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 </body>
 
 </html>
