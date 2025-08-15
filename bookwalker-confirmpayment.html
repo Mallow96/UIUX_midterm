@@ -12,21 +12,202 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- bootstrap -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 
     <!-- google fonts icons-->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="./bookwalker-confirmpayment.html">
+    <link rel="stylesheet" href="./style/bookwalker-confirmpayment.css">
 </head>
 
 <body>
+    <header>
+        <div class="container">
+            <div class="navbar navbar-expand-lg bg-body-tertiary flex-column">
+                <div class="row align-items-center gy-1 w-100">
+                    <!-- logo -->
+                    <div class="col-3 col-lg-3 logo">
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/BOOK☆WALKER_logo.svg" alt="">
+                        </a>
+                    </div>
+
+                    <!-- icon nav -->
+                    <div class="col-9  col-lg-3 d-flex justify-content-end icon-nav gap-3">
+                        <ol class="nav d-flex gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark px-0" href="#">
+                                    <span class="material-symbols-outlined">
+                                        newsstand
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark px-0" href="#">
+                                    <span class="material-symbols-outlined">
+                                        notifications
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark px-0" href="#">
+                                    <span class="material-symbols-outlined">
+                                        bookmark_heart
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark px-0" href="#">
+                                    <span class="material-symbols-outlined">
+                                        shopping_cart
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark px-0" href="#">
+                                    <span class="material-symbols-outlined">
+                                        person
+                                    </span>
+                                </a>
+                            </li>
+                        </ol>
+
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+
+                    <!-- search bar -->
+                    <div class="search-bar input-group col-12 col-lg">
+                        <!-- age restrict -->
+                        <span class="input-group-text  rounded-start-pill">
+                            <span class="btn btn-sm material-symbols-outlined" data-bs-toggle="collapse"
+                                data-bs-target="#collapseWidthExample" aria-expanded="false"
+                                aria-controls="collapseWidthExample">
+                                encrypted
+                            </span>
+                        </span>
+                        <span class="input-group-text collapse collapse-horizontal" id="collapseWidthExample">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                                <label class="form-check-label" for="switchCheckDefault">
+                                    年齡限制搜尋
+                                </label>
+                            </div>
+                        </span>
+                        <!-- dropdown -->
+                        <span class="input-group-text">
+                            <div class="dropdown">
+                                <button class="btn btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    全部
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">連載</a></li>
+                                    <li><a class="dropdown-item" href="#">漫畫</a></li>
+                                    <li><a class="dropdown-item" href="#">輕小說</a></li>
+                                    <li><a class="dropdown-item" href="#">文學</a></li>
+                                    <li><a class="dropdown-item" href="#">實用書</a></li>
+                                    <li><a class="dropdown-item" href="#">日文書</a></li>
+                                    <li><a class="dropdown-item" href="#">雜誌</a></li>
+                                    <li><a class="dropdown-item" href="#">限制級</a></li>
+                                    <li><a class="dropdown-item" href="#">聲音作品</a></li>
+                                    <li><a class="dropdown-item" href="#">點數商店</a></li>
+                                </ul>
+                            </div>
+                        </span>
+
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"
+                            placeholder="今天想找什麼作品？">
+
+                        <!-- search -->
+                        <span class="input-group-text rounded-end-pill">
+                            <span class="btn btn-sm material-symbols-outlined">
+                                search
+                            </span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- genre nav -->
+                <div class="genre row w-100">
+                    <nav class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav row w-100 position-relative">
+                            <div class="dropdown col">
+                                <a class="nav-link text-center rounded-3" href="#" id="navbarDropdown-1" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    連載
+                                </a>
+
+                                <div class="dropdown-menu megamenu menu-1" aria-labelledby="navbarDropdown-1">
+                                    <ul class="list-unstyled row">
+                                        <li class="col">1</li>
+                                        <li class="col">2</li>
+                                        <li class="col">3</li>
+                                        <li class="col">4</li>
+                                        <li class="col">5</li>
+                                        <li class="col">6</li>
+                                        <li class="col">7</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="dropdown col">
+                                <a class="nav-link text-center rounded-3" href="#" id="navbarDropdown-2" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    連載
+                                </a>
+
+                                <div class="dropdown-menu megamenu menu-2" aria-labelledby="navbarDropdown-2">
+                                    <ul class="list-unstyled row">
+                                        <li class="col">
+                                            1 </li>
+                                        <li class="col">
+                                            2 </li>
+                                        <li class="col">
+                                            3 </li>
+                                        <li class="col">
+                                            4 </li>
+                                        <li class="col">
+                                            5 </li>
+                                        <li class="col">
+                                            6 </li>
+                                        <li class="col">
+                                            7 </li>
+                                        <li class="col">
+                                            8 </li>
+                                        <li class="col">
+                                            9 </li>
+                                        <li class="col">
+                                            10 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
 
 
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+
+
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script> -->
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

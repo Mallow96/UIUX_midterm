@@ -1,1 +1,52 @@
-/*# sourceMappingURL=bookwalker-confirmpayment.css.map */
+@charset "UTF-8";
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+header {
+  background-color: white;
+}
+
+header > .container > .navbar {
+  background-color: transparent !important;
+}
+
+.genre > nav > div > a:hover {
+  background-color: lightgray;
+}
+
+.icon-nav > ol > li > a > .material-symbols-outlined {
+  font-size: 1.75rem;
+  line-height: normal;
+}
+
+.icon-nav > ol > li:nth-child(1), .icon-nav > ol > li:nth-child(3) {
+  display: none;
+}
+
+.genre > nav > div > .dropdown:hover .dropdown-menu {
+  display: block;
+  /* 移除 Bootstrap 預設的 margin-top，讓選單緊貼按鈕 */
+  margin-top: 0;
+}
+
+.genre > nav > div > .dropdown > .megamenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 992px) {
+  header > .container > div > div > .logo {
+    order: -1;
+  }
+  header > .container > div > div > .icon-nav {
+    order: 1;
+  }
+  header > .container > div > div > .search-bar {
+    order: -1;
+  }
+  .icon-nav > ol > li:nth-child(1), .icon-nav > ol > li:nth-child(3) {
+    display: inline-block;
+  }
+}/*# sourceMappingURL=bookwalker-confirmpayment.css.map */
