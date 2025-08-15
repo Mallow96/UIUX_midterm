@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(243, 243, 243);
 }
@@ -10,7 +16,7 @@ header>.container>.navbar {
     background-color: transparent !important;
 }
 
-.genre>nav>div>a:hover {
+.genre>nav>.navbar-nav>div>div>a:hover {
     background-color: lightgray;
 }
 
@@ -23,19 +29,22 @@ header>.container>.navbar {
     display: none;
 }
 
-.genre>nav>div>.dropdown:hover .dropdown-menu {
-            display: block;
-            /* 移除 Bootstrap 預設的 margin-top，讓選單緊貼按鈕 */
-            margin-top: 0;
-        }
-
-.genre>nav>div>.dropdown>.megamenu {
+.mega-menu {
+    display: none;
     position: absolute;
-    left: 0;
-    right: 0;
+    top: 100%;
+    z-index: 3;
 }
 
-@media (min-width: 992px) {
+.gnav {
+    white-space: nowrap;
+}
+
+.steps {
+    white-space: nowrap;
+}
+
+ @media (min-width: 992px) {
     header>.container>div>div>.logo {
         order: -1;
     }
@@ -50,5 +59,47 @@ header>.container>.navbar {
 
     .icon-nav>ol>li:nth-child(1), .icon-nav>ol>li:nth-child(3) {
     display: inline-block;
-}
+    }
+
+    
+    .gnav1:hover ~ .mg-menu-1, .mg-menu-1:hover {
+    display: flex;
+    }
+
+    .gnav2:hover ~ .mg-menu-2, .mg-menu-2:hover {
+    display: flex;
+    }
+
+    .gnav3:hover ~ .mg-menu-3, .mg-menu-3:hover {
+    display: flex;
+    }
+
+    .gnav4:hover ~ .mg-menu-4, .mg-menu-4:hover {
+    display: flex;
+    }
+
+    .gnav5:hover ~ .mg-menu-5, .mg-menu-5:hover {
+    display: flex;
+    }
+
+    .gnav6:hover ~ .mg-menu-6, .mg-menu-6:hover {
+    display: flex;
+    }
+
+    .gnav7:hover ~ .mg-menu-7, .mg-menu-7:hover {
+    display: flex;
+    }
+
+    .gnav8:hover ~ .mg-menu-8, .mg-menu-8:hover {
+    display: flex;
+    }
+
+    .gnav9:hover ~ .mg-menu-9, .mg-menu-9:hover {
+    display: flex;
+    }
+
+    .gnav10:hover ~ .mg-menu-10, .mg-menu-10:hover {
+    display: flex;
+    }
+
 }
