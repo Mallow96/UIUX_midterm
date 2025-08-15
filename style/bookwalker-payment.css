@@ -141,8 +141,8 @@ header > .container {
   align-items: center;
 }
 
-header > div > .logo > img {
-  width: 13rem;
+header > div > .logo > a > img {
+  width: 12rem;
 }
 
 .sb-outline {
@@ -152,15 +152,28 @@ header > div > .logo > img {
   justify-content: space-between;
 }
 
+.sb-outline:hover {
+  border-color: black;
+}
+
 .sb-dropdown {
   margin: 0 0.75rem;
 }
 
-header > div > .icon-bar > .header-icons {
+header > div > .icon-bar > a {
+  color: black;
+  text-decoration: none;
+}
+
+header > div > .icon-bar > a:hover {
+  color: rgb(75, 75, 75);
+}
+
+header > div > .icon-bar > a > .header-icons {
   font-size: 1.5rem;
 }
 
-header > div > .icon-bar > .bookshelf, header > div > .icon-bar > .wishlist {
+header > div > .icon-bar > a > .bookshelf, header > div > .icon-bar > a > .wishlist {
   display: none;
 }
 
@@ -317,6 +330,10 @@ header > div > .icon-bar > .bookshelf, header > div > .icon-bar > .wishlist {
   padding-top: 0.75rem;
 }
 
+.pay-btn > a > button:hover, .pay-btn > a > button:active {
+  background-color: rgb(160, 16, 0);
+}
+
 .confirm-payment {
   background-color: #D30000;
   font-size: 1.5rem;
@@ -339,13 +356,13 @@ header > div > .icon-bar > .bookshelf, header > div > .icon-bar > .wishlist {
   header > div > .logo {
     order: -1;
   }
-  header > div > .icon-bar > .header-icons {
+  header > div > .icon-bar > a > .header-icons {
     font-size: 1.6rem;
   }
-  header > div > .icon-bar > .bookshelf, header > div > .icon-bar > .wishlist {
+  header > div > .icon-bar > a > .bookshelf, header > div > .icon-bar > a > .wishlist {
     display: inline-block;
   }
-  header > div > .icon-bar > .menu {
+  header > div > .icon-bar > a > .menu {
     display: none;
   }
   header > div > .search-bar {
@@ -397,7 +414,10 @@ header > div > .icon-bar > .bookshelf, header > div > .icon-bar > .wishlist {
   }
 }
 @media (min-width: 1024px) {
-  header > div > .icon-bar > .header-icons {
+  header > div > .icon-bar > a > .header-icons {
     font-size: 2rem;
+  }
+  header > div > .logo > a > img {
+    width: 14rem;
   }
 }/*# sourceMappingURL=bookwalker-payment.css.map */
