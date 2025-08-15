@@ -7,6 +7,8 @@ body {
     background-color: rgb(240, 240, 240)!important;
 }
 
+
+
 .steps{
     display: flex;
     align-items: center;
@@ -67,9 +69,6 @@ body {
     min-width: 250px;
     max-width: 420px;
 }
-
-
-
 
 @media (min-width:992px) {
     header>.navbar>.navbar-brand {
